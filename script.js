@@ -1,3 +1,5 @@
+/* name generator */ 
+
 const decoration = [
     "宏",
     "牡",
@@ -110,7 +112,6 @@ const mapping = [
     "randomPhrase"
 ] 
 
-let  generatorImage = document.querySelector('.generator-header-figure-image');
 let generatorName = document.querySelector('.generator-logic-name');
 const generatorButton = document.querySelector('.generator-logic-button');
 
@@ -128,4 +129,47 @@ generatorButton.addEventListener('click', function () {
     let randomMaping = getRandomElement(mapping);
     generatorName.textContent = eval(randomMaping);
     /* turns string from "mapping" array into variable */
+    console.log(generatorName.textContent.length);
+    if (generatorName.textContent.length >= 19) {
+        generatorName.style.fontSize = '2vh';
+        generatorName.style.fontWeight = 'bold';
+    }   else {
+        generatorName.style.fontSize = '4vh';
+        generatorName.style.fontWeight = 'normal';
+    }
 })
+
+
+/* image generator */
+
+
+const images = [
+    { src:"https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpm1.narvii.com%2F6699%2F701699184917adb74894b7b31772d54408e06b36_00.jpg&f=1&nofb=1" , alt:"уже почти гуль" },
+    { src:"https://awesomereviews.ru/wp-content/uploads/2016/03/miniature-752x440.jpg" , alt:"гуль" },
+    { src:"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmemepedia.ru%2Fwp-content%2Fuploads%2F2019%2F08%2Fded-insayd-5-768x768.jpg&f=1&nofb=1" , alt:"гуль валакас" },
+    { src:"https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fsun9-36.userapi.com%2Fimpg%2Fw73PxsgiyLLHCr24SKWw0eYVD7FNl2JeywsHOA%2FQ9K1hPup7ts.jpg%3Fsize%3D400x0%26quality%3D90%26crop%3D280%2C0%2C720%2C720%26sign%3D2290780159d08078773ab63707d815b7%26ava%3D1&f=1&nofb=1" , alt:"безобидный гуль" },
+]
+
+
+let generatorImage = document.querySelector('.generator-header-figure-image');
+let generatorCounter = 0;
+let index = 0;
+
+generatorButton.addEventListener('click', function () {
+    generatorCounter += 1;
+    if (generatorCounter >= 3 && generatorCounter < 6) {
+            generatorImage.src = images[0].src;
+            generatorImage.alt = images[0].alt;
+    }   else if (generatorCounter >= 6 && generatorCounter < 9) {
+        generatorImage.src = images[1].src;
+        generatorImage.alt = images[1].alt;
+    }   else if (generatorCounter >= 9 && generatorCounter < 12)  {
+        generatorImage.src = images[2].src;
+        generatorImage.alt = images[2].alt;
+    }   else if (generatorCounter >= 12) {
+        generatorImage.src = images[images.length - 1].src;
+        generatorImage.alt = images[images.length - 1].alt;
+        generatorCounter = 0;
+    }
+})
+
