@@ -10,7 +10,11 @@ const decoration = [
     "ス",
     "能",
     "ナ",
-    "瑞"
+    "瑞",
+    "†",
+    "‡",
+    "☠",
+    "༒",
 ];
 
 const prefix = [
@@ -25,22 +29,22 @@ const prefix = [
     "sad",
     "mode:",
     "666",
-    "obsessed"
+    "obsessed",
+    "322"
 ]
 
 const spacing = [
     " ",
-    "_",
-    "†",
-    "‡",
-    "☠",
-    "༒",
+    " ",
+    "|"
 ]
 
 const phrase = [
     "мёртв внутри",
     "дед внутри",
+    "мама киллер",
     "dead inside",
+    "Dead inside",
     "hate me as you do",
     "amulet abuzer",
     "anti social",
@@ -54,7 +58,8 @@ const phrase = [
     "плевать на всех",
     "all mute",
     "eternal despair",
-    "bury me alive"
+    "bury me alive",
+    "1v9"
 ]
 
 const word = [
@@ -80,19 +85,29 @@ const word = [
 ]
 
 const mapping = [
-    "randomPrefix + randomDecoration + randomSpacing + randomWord + randomSpacing + randomDecoration + randomPhrase",
+    "randomPrefix + randomSpacing + randomPhrase + randomDecoration + randomWord +randomDecoration",
+    "randomPrefix + randomDecoration + randomPhrase + randomDecoration + randomSpacing + randomWord",
+    "randomPrefix + randomDecoration + randomWord + randomDecoration + randomPhrase",
+    "randomPrefix + randomSpacing + randomWord + randomSpacing + randomPhrase",
     "randomPrefix + randomSpacing + randomPhrase + randomSpacing + randomWord",
+    "randomPrefix + randomDecoration + randomWord + randomDecoration",
     "randomPrefix + randomSpacing + randomWord",
-    "randomPrefix + randomDecoration + randomPhrase + randomDecoration",
-    "randomDecoration + randomSpacing + randomPhrase + randomSpacing + randomDecoration",
+    "randomPrefix + randomSpacing + randomPhrase",
+    "randomDecoration + randomWord + randomDecoration + randomPhrase + randomSpacing + randomPrefix",
+    "randomDecoration + randomPhrase + randomDecoration + randomWord + randomSpacing + randomPrefix",
+    "randomDecoration + randomPhrase + randomDecoration + randomSpacing + randomPrefix",
+    "randomDecoration + randomWord + randomDecoration + randomPhrase + randomPrefix",
+    "randomDecoration + randomWord + randomDecoration + randomPhrase",
     "randomDecoration + randomPhrase + randomDecoration + randomWord",
     "randomDecoration + randomWord + randomDecoration",
-    "randomDecoration + randomPhrase + randomDecoration",
-    "randomWord + randomSpacing + randomPhrase + randomSpacing" ,
-    "ranomdWord + randomSpacing + randomPhrase",
-    "ranomdWord + randomSpacing + randomPrefix",
+    "randomWord + randomDecoration + randomPhrase + randomDecoration + randomPrefix",
+    "randomWord + randomSpacing + randomPhrase + randomSpacing + randomPrefix",
+    "randomWord + randomSpacing + randomPhrase",
+    "randomWord",
+    "randomPhrase + randomDecoration + randomWord + randomDecoration + randomPrefix",
+    "randomPhrase + randomSpacing + randomWord + randomSpacing + randomPrefix",
     "randomPhrase + randomSpacing + randomWord",
-    "randomPhrase + randomSpacing + randomPrefix"
+    "randomPhrase"
 ] 
 
 let  generatorImage = document.querySelector('.generator-header-figure-image');
