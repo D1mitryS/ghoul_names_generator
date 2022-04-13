@@ -1,0 +1,91 @@
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+figure,
+button {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    line-height: 4vh;
+    font-weight: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin:  auto;
+    min-height: 100%;
+
+}
+
+.page-header {
+    min-height: 10vh;
+    background-color: rgba(22, 22, 22, .9);
+}
+
+.content {
+    min-height: 80vh;
+    background-color: rgba(200, 200, 200, .4);
+    display: flex;
+}
+
+
+.generator-header-title {
+    font-size: 5vh;
+    font-weight: 700;
+    margin: 0 0 2%;
+}
+
+.generator-header-figure{
+    width: 60vh;
+    max-width: 100%;
+    /*улучшает отображение на мобилках и на десктопе*/
+    margin: 0 0 2%;
+}
+
+.generator-header-figure-image {
+    width: 100%;
+}
+
+
+.generator-logic-name {
+    font-size: 4vh;
+    margin: 0 0 1%;
+    
+}
+
+.generator-logic-button {
+    display: block;
+    padding: 0.5%;
+    border-radius: 5%;
+    background-color: rgba(22, 22, 22, 0.9);
+    color: rgb(255, 253, 253);
+    font-size: 2.5vh;
+}
+
+.generator-logic-button:hover {
+    background-color: #a50c0ce8;
+}
+
+.page-footer {
+    min-height: 10vh;
+    background-color: rgba(22, 22, 22, 0.9);
+}
+
+
+
+
