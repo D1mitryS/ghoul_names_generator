@@ -25,6 +25,15 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.visually-hidden {
+    font-size: 4vh;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
 
 .container {
     width: 80%;
@@ -45,7 +54,7 @@ body {
 }
 
 
-.generator-header-title {
+.generator-title {
     font-size: 5vh;
     font-weight: 700;
     margin: 0 0 2%;
