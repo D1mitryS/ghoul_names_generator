@@ -32,7 +32,8 @@ const prefix = [
     "mode:",
     "666",
     "obsessed",
-    "322"
+    "322",
+    "ugly god",
 ]
 
 const spacing = [
@@ -50,7 +51,6 @@ const phrase = [
     "hate me as you do",
     "amulet abuzer",
     "anti social",
-    "ugly god",
     "13 y.o.",
     "no brain",
     "mid or feed",
