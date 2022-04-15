@@ -88,7 +88,7 @@ const word = [
 
 const mapping = [
     "randomPrefix + randomSpacing + randomPhrase + randomDecoration + randomWord +randomDecoration",
-    "randomPrefix + randomDecoration + randomPhrase + randomDecoration + randomSpacing + randomWord",
+    "randomPrefix + randomDecoration + randomPhrase + randomDecoration + randomWord",
     "randomPrefix + randomDecoration + randomWord + randomDecoration + randomPhrase",
     "randomPrefix + randomSpacing + randomWord + randomSpacing + randomPhrase",
     "randomPrefix + randomSpacing + randomPhrase + randomSpacing + randomWord",
@@ -97,7 +97,7 @@ const mapping = [
     "randomPrefix + randomSpacing + randomPhrase",
     "randomDecoration + randomWord + randomDecoration + randomPhrase + randomSpacing + randomPrefix",
     "randomDecoration + randomPhrase + randomDecoration + randomWord + randomSpacing + randomPrefix",
-    "randomDecoration + randomPhrase + randomDecoration + randomSpacing + randomPrefix",
+    "randomDecoration + randomPhrase + randomDecoration + randomPrefix",
     "randomDecoration + randomWord + randomDecoration + randomPhrase + randomPrefix",
     "randomDecoration + randomWord + randomDecoration + randomPhrase",
     "randomDecoration + randomPhrase + randomDecoration + randomWord",
@@ -110,8 +110,8 @@ const mapping = [
     "randomPhrase + randomSpacing + randomWord",
 ] 
 
-let generatorName = document.querySelector('.generator-logic-name');
 const generatorButton = document.querySelector('.generator-logic-button');
+let generatorName = document.querySelector('.generator-logic-name');
 
 function getRandomElement(array) {
     let randomIndex = Math.floor(Math.random() * array.length);
@@ -127,11 +127,15 @@ generatorButton.addEventListener('click', function () {
     let randomMaping = getRandomElement(mapping);
     generatorName.textContent = eval(randomMaping);
     /* turns string from "mapping" array into variable */
-    console.log(generatorName.textContent.length);
     if (generatorName.textContent.length >= 19) {
         generatorName.style.fontSize = '2.5em';
-    }   else {
+        generatorName.style.fontWeight = '500';
+    }   else if (generatorName.textContent.length >= 34) {
+        generatorName.style.fontSize = '2em';
+        generatorName.style.fontWeight = '500';
+        }   else {
         generatorName.style.fontSize = '3em';
+        generatorName.style.fontWeight = 'normal';
     }
 })
 
