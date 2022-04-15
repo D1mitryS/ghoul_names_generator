@@ -105,11 +105,9 @@ const mapping = [
     "randomWord + randomDecoration + randomPhrase + randomDecoration + randomPrefix",
     "randomWord + randomSpacing + randomPhrase + randomSpacing + randomPrefix",
     "randomWord + randomSpacing + randomPhrase",
-    "randomWord",
     "randomPhrase + randomDecoration + randomWord + randomDecoration + randomPrefix",
     "randomPhrase + randomSpacing + randomWord + randomSpacing + randomPrefix",
     "randomPhrase + randomSpacing + randomWord",
-    "randomPhrase"
 ] 
 
 let generatorName = document.querySelector('.generator-logic-name');
@@ -131,11 +129,9 @@ generatorButton.addEventListener('click', function () {
     /* turns string from "mapping" array into variable */
     console.log(generatorName.textContent.length);
     if (generatorName.textContent.length >= 19) {
-        generatorName.style.fontSize = '2vh';
-        generatorName.style.fontWeight = 'bold';
+        generatorName.style.fontSize = '2.5em';
     }   else {
-        generatorName.style.fontSize = '4vh';
-        generatorName.style.fontWeight = 'normal';
+        generatorName.style.fontSize = '3em';
     }
 })
 
@@ -173,3 +169,8 @@ generatorButton.addEventListener('click', function () {
     }
 })
 
+/* play audio on load */
+
+let audio = document.querySelector('.audio');
+
+audio.play();
