@@ -33,9 +33,6 @@ main {
     background-color: rgba(0, 0, 0, .5);
     height: 100%;
     display: flex;
-
-    /* height: auto; */
-    /* min-height: 100vh */
 }
 
 .container {
@@ -114,8 +111,9 @@ main {
 
 .generator-logic-name {
     font-size: 3em;
-    line-height: 1em;
-    /* border: solid black; */
+    line-height: 1.5em;
+    border-bottom: solid 0.1vh rgba(22, 22, 22, 0.9);
+    width: fit-content;
 }
 
 
@@ -125,9 +123,4 @@ main {
     width: 100%;
     height: 100%;
 }
-
-
-
-
-
 
