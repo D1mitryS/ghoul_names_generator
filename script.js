@@ -141,7 +141,7 @@ generatorButton.addEventListener('click', function () {
     audio.play();
 })
 
-/* image switcher */
+/* image switcher on load */
 const images = [
     "img/giphy0.gif",
     "img/giphy1.gif",
@@ -153,4 +153,7 @@ const images = [
 let generatorImage = document.querySelector('.generator-image');
 
 generatorImage.src = getRandomElement(images);
+
+/* nickname switcher on load */
+
 
