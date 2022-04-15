@@ -136,7 +136,7 @@ generatorButton.addEventListener('click', function () {
 })
 
 
-/* image generator */
+/* image switcher and audio play */
 
 
 const images = [
@@ -148,29 +148,24 @@ const images = [
 
 
 let generatorImage = document.querySelector('.generator-header-figure-image');
+let audio = document.querySelector('.audio');
 let generatorCounter = 0;
-let index = 0;
 
 generatorButton.addEventListener('click', function () {
+    audio.play();
     generatorCounter += 1;
     if (generatorCounter >= 3 && generatorCounter < 6) {
             generatorImage.src = images[0].src;
             generatorImage.alt = images[0].alt;
     }   else if (generatorCounter >= 6 && generatorCounter < 9) {
-        generatorImage.src = images[1].src;
-        generatorImage.alt = images[1].alt;
+            generatorImage.src = images[1].src;
+            generatorImage.alt = images[1].alt;
     }   else if (generatorCounter >= 9 && generatorCounter < 12)  {
-        generatorImage.src = images[2].src;
-        generatorImage.alt = images[2].alt;
+            generatorImage.src = images[2].src;
+            generatorImage.alt = images[2].alt;
     }   else if (generatorCounter >= 12) {
-        generatorImage.src = images[images.length - 1].src;
-        generatorImage.alt = images[images.length - 1].alt;
-        generatorCounter = 0;
+            generatorImage.src = images[images.length - 1].src;
+            generatorImage.alt = images[images.length - 1].alt;
+            generatorCounter = 0;
     }
 })
-
-/* play audio on load */
-
-let audio = document.querySelector('.audio');
-
-audio.play();
