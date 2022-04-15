@@ -110,7 +110,7 @@ const mapping = [
     "randomPhrase + randomSpacing + randomWord",
 ] 
 
-const generatorButton = document.querySelector('.generator-logic-button');
+const generatorButton = document.querySelector('.generator-button');
 let generatorName = document.querySelector('.generator-logic-name');
 
 function getRandomElement(array) {
@@ -127,16 +127,13 @@ generatorButton.addEventListener('click', function () {
     let randomMaping = getRandomElement(mapping);
     generatorName.textContent = eval(randomMaping);
     /* turns string from "mapping" array into variable */
-    if (generatorName.textContent.length >= 19) {
-        generatorName.style.fontSize = '2.5em';
-        generatorName.style.fontWeight = '500';
-    }   else if (generatorName.textContent.length >= 34) {
-        generatorName.style.fontSize = '2em';
-        generatorName.style.fontWeight = '500';
-        }   else {
-        generatorName.style.fontSize = '3em';
-        generatorName.style.fontWeight = 'normal';
-    }
+    // if (generatorName.textContent >= 15) {
+    //     generatorName.style.fontSize = "4em";
+    //     generatorName.style.fontWeight = "600";
+    // }   else {
+    //         generatorName.style.fontSize = "6em";
+    //         generatorName.style.fontWeight = "400"
+    // }
 })
 
 
@@ -151,7 +148,7 @@ const images = [
 ]
 
 
-let generatorImage = document.querySelector('.generator-header-figure-image');
+let generatorImage = document.querySelector('.generator-image');
 let audio = document.querySelector('.audio');
 let generatorCounter = 0;
 
