@@ -127,13 +127,13 @@ generatorButton.addEventListener('click', function () {
     let randomMaping = getRandomElement(mapping);
     generatorName.textContent = eval(randomMaping);
     /* turns string from "mapping" array into variable */
-    // if (generatorName.textContent >= 15) {
-    //     generatorName.style.fontSize = "4em";
-    //     generatorName.style.fontWeight = "600";
-    // }   else {
-    //         generatorName.style.fontSize = "6em";
-    //         generatorName.style.fontWeight = "400"
-    // }
+    if (generatorName.textContent.length >= 15) {
+        generatorName.style.fontSize = "2.5em";
+        generatorName.style.fontWeight = "500";
+    }   else {
+            generatorName.style.fontSize = "3em";
+            generatorName.style.fontWeight = "400"
+    }
 })
 
 
