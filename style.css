@@ -2,24 +2,21 @@ html {
     scroll-behavior: smooth;
 }
 
-html, body, h1, h2, h3, p, figure, button {
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
-    font-size: 100%;
-}
-
-figure {
-    font-size: 0;
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 * {
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+html, body, h1, h2, h3, p, button {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-size: 100%;
 }
+
 
 main {
     height: 100vh;
@@ -43,31 +40,29 @@ main {
 .generator {
     background-color: rgba(255, 255, 255, .95);
     border-radius: 1%;
-    font-size: 0;
 }
 
-.padding {
-    padding: 1.5% 0 1.5% 1.5%;
-}
 
 .generator-header {
     background-color: rgba(22, 22, 22, 0.9);
     padding: .5%;
     text-align: center;
     color: #eee;
-    font-size: 1rem;
     box-shadow: 0.5vh 0.5vh 6vh black;
 }
 
-.generator-header-title {
+.generator-header h1 {
     font-size: 1.5em;
 }
 
-.generator-promo {
+.padding {
+    padding: 1.5% 0 1.5% 1.5%;
+}
+
+section.generator-promo {
     float: left;
-    width: 35%;
+    width: 30%;
     margin-right: 5%;
-    font-size: 1rem;
 }
 
 .visually-hidden {
@@ -78,34 +73,35 @@ main {
     margin: -1px;
 }    
 
-.generator-promo-figure{
+.generator-promo figure {
+    font-size: 0;
+    padding: 0;
+    margin: 0;
     margin-bottom: 5%;
-    
 }
 
-.generator-promo-figure img {
+.generator-promo figure .generator-image {
     width: 100%;
     border-radius: 1%;
 }
 
-.generator-header-button {
+.generator-button {
     display: block;
     width: 100%; 
     padding: 2.5%;
     border-radius: 1%;
     background-color: rgba(22, 22, 22, 0.9);
     color: #eee;
-    font-size: 1.5em;
     text-align: center;
 }
 
-.generator-header-button:hover {
+.generator-button:hover {
     background-color: #a50c0ce8;
 }
 
-.generator-logic {
+section.generator-logic {
     float: left;
-    width: 60%;
+    width: 65%;
     font-size: 1rem;
 }
 
@@ -117,6 +113,10 @@ main {
 }
 
 /* spacer bc of 'float' blocks */
+.no-font {
+    font-size: 0;
+}
+
 .spacer {
     display: inline-block;
     width: 100%;
