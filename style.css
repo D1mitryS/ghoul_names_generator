@@ -10,7 +10,13 @@ body {
     box-sizing: border-box;
 }
 
-html, body, h1, h2, h3, p, button {
+html,
+body,
+h1,
+h2,
+h3,
+p,
+button {
     margin: 0;
     padding: 0;
     font-weight: normal;
@@ -34,14 +40,13 @@ main {
 
 .container {
     width: 90%;
-    margin:  auto;
-}    
+    margin: auto;
+}
 
 .generator {
     background-color: rgba(255, 255, 255, .95);
     border-radius: 1%;
 }
-
 
 .generator-header {
     background-color: rgba(22, 22, 22, 0.9);
@@ -62,6 +67,7 @@ main {
 section.generator-promo {
     float: left;
     width: 30%;
+    /* padding: 5%; */
     margin-right: 5%;
 }
 
@@ -71,7 +77,7 @@ section.generator-promo {
     width: 1px;
     height: 1px;
     margin: -1px;
-}    
+}
 
 .generator-promo figure {
     font-size: 0;
@@ -87,12 +93,13 @@ section.generator-promo {
 
 .generator-button {
     display: block;
-    width: 100%; 
+    width: 100%;
     padding: 2.5%;
     border-radius: 1%;
     background-color: rgba(22, 22, 22, 0.9);
     color: #eee;
     text-align: center;
+    font-size: 1.5em;
 }
 
 .generator-button:hover {
