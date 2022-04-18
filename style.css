@@ -67,7 +67,6 @@ main {
 section.generator-promo {
     float: left;
     width: 30%;
-    /* padding: 5%; */
     margin-right: 5%;
 }
 
@@ -115,7 +114,7 @@ section.generator-logic {
 .generator-logic-name {
     font-size: 3em;
     line-height: 1.5em;
-    border-bottom: solid 0.1vh rgba(22, 22, 22, 0.9);
+    /* border-bottom: solid 0.1vh rgba(22, 22, 22, 0.9); */
     width: fit-content;
 }
 
@@ -127,5 +126,4 @@ section.generator-logic {
 .spacer {
     display: inline-block;
     width: 100%;
-    height: 100%;
 }

@@ -1,3 +1,17 @@
+/* image switcher on load */
+const images = [
+    "https://media3.giphy.com/media/S3UJC9kWXkORi/giphy.gif?cid=790b761186e7d5725feb3fa35ba9dc04f77bbb0776b6e202&rid=giphy.gif&ct=g",
+    "https://media1.giphy.com/media/jlVObChD6Fb5C/giphy.gif?cid=790b7611357a7d0a60623974e9e8c485f8f654b17d31733c&rid=giphy.gif&ct=g",
+    "https://media3.giphy.com/media/4EEV2sRFfQiPfoITqA/giphy.gif?cid=790b76117a37cff6fd5fef6f81ba014a18d626b76a642215&rid=giphy.gif&ct=g",
+    "https://media3.giphy.com/media/mKAc6ZZqeE4Ao/giphy.gif?cid=790b7611dbc7c7a5b8077fe68ff2528be783eb3f3662cafe&rid=giphy.gif&ct=g",
+    "https://media3.giphy.com/media/2XLoAphEiufV6/giphy.gif?cid=790b7611d2398c73293a2c0ee881283c7038418c9fcfa650&rid=giphy.gif&ct=g",
+    "https://media0.giphy.com/media/3eQduEnQqEpVFOO6FQ/giphy.gif?cid=790b761148231cf91f523ec1a73917f3056256814e9cd625&rid=giphy.gif&ct=g"
+]
+
+let generatorImage = document.querySelector('.generator-image');
+
+generatorImage.src = getRandomElement(images);
+
 /* name generator */ 
 const decoration = [
     "宏",
@@ -118,9 +132,9 @@ generatorButton.addEventListener('click', function () {
     let randomSpacing = getRandomElement(spacing);
     let randomPhrase = getRandomElement(phrase);
     let randomWord = getRandomElement(word);
-    let randomMaping = getRandomElement(mapping);
+    let randomMaping = eval(getRandomElement(mapping));
     /* turns string from "mapping" array into variable */
-    generatorName.textContent = eval(randomMaping);
+    generatorName.textContent = randomMaping;
     let nameLength = generatorName.textContent.length
     if (nameLength >= 15 && nameLength < 25) {
         generatorName.style.fontSize = "2.5em";
@@ -140,19 +154,6 @@ const audio = document.querySelector('.audio');
 generatorButton.addEventListener('click', function () {
     audio.play();
 })
-
-/* image switcher on load */
-const images = [
-    "img/giphy0.gif",
-    "img/giphy1.gif",
-    "img/giphy2.gif",
-    "img/giphy3.gif",
-    "img/giphy4.gif",
-]
-
-let generatorImage = document.querySelector('.generator-image');
-
-generatorImage.src = getRandomElement(images);
 
 /* nickname switcher on load */
 
