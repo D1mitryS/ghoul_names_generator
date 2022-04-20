@@ -121,10 +121,6 @@ const mapping = [
 const generatorButton = document.querySelector('.generator-button');
 let generatorName = document.querySelector('.generator-logic-name');
 
-function getRandomElement(array) {
-    let randomIndex = Math.floor(Math.random() * array.length);
-    return array[randomIndex];
-}
 
 generatorButton.addEventListener('click', function () {
     let randomDecoration = getRandomElement(decoration);
@@ -146,7 +142,16 @@ generatorButton.addEventListener('click', function () {
         generatorName.style.fontSize = "3em";
         generatorName.style.fontWeight = "normal"
     }
+    return randomMaping;
 })
+
+/* get random item from array */
+
+function getRandomElement(array) {
+    let randomIndex = Math.floor(Math.random() * array.length);
+    return array[randomIndex];
+}
+
 
 /* audio play */
 const audio = document.querySelector('.audio');
@@ -154,7 +159,3 @@ const audio = document.querySelector('.audio');
 generatorButton.addEventListener('click', function () {
     audio.play();
 })
-
-/* nickname switcher on load */
-
-

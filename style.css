@@ -16,11 +16,11 @@ h1,
 h2,
 h3,
 p,
-button {
+button   {
     margin: 0;
     padding: 0;
     font-weight: normal;
-    font-size: medium;
+    font-size: 100%;
 }
 
 
@@ -39,16 +39,28 @@ main {
 }
 
 .container {
-    width: 90%;
+    width: 80%;
     margin: auto;
 }
 
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
 .generator {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     background-color: rgba(255, 255, 255, .95);
     border-radius: 1%;
 }
 
 .generator-header {
+    width: 100%;
     background-color: rgba(22, 22, 22, 0.9);
     padding: .5%;
     text-align: center;
@@ -60,70 +72,42 @@ main {
     font-size: 1.5em;
 }
 
-.padding {
-    padding: 1.5% 0 1.5% 1.5%;
-}
-
 section.generator-promo {
-    float: left;
     width: 30%;
-    margin-right: 5%;
+    padding: .5%;
+    display: flex;
 }
 
-.visually-hidden {
-    position: absolute;
-    clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+.generator-promo img {
+    max-width: 100%;
+    height: auto;
 }
 
-.generator-promo figure {
-    font-size: 0;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 5%;
-}
-
-.generator-promo figure .generator-image {
-    width: 100%;
-    border-radius: 1%;
-}
-
-.generator-button {
-    display: block;
-    width: 100%;
-    padding: 2.5%;
-    border-radius: 1%;
-    background-color: rgba(22, 22, 22, 0.9);
-    color: #eee;
-    text-align: center;
-    font-size: 1.5em;
-}
-
-.generator-button:hover {
-    background-color: #a50c0ce8;
-}
 
 section.generator-logic {
-    float: left;
-    width: 65%;
-    font-size: 1rem;
+    width: 70%;
+    padding: .5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .generator-logic-name {
     font-size: 3em;
-    line-height: 1.5em;
-    /* border-bottom: solid 0.1vh rgba(22, 22, 22, 0.9); */
-    width: fit-content;
+    line-height: 1;
 }
 
-/* spacer bc of 'float' blocks */
-.no-font {
-    font-size: 0;
-}
 
-.spacer {
-    display: inline-block;
-    width: 100%;
+.generator-button {
+    padding: .5%;
+    border-radius: 1%;
+    background-color: rgba(22, 22, 22, 0.9);
+    color: #eee;
+    align-self: flex-end;
+    margin: 0 1% 1% 0;
+}
+    
+    
+.generator-button:hover {
+    background-color: #a50c0ce8;
 }
