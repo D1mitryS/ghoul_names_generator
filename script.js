@@ -12,7 +12,7 @@ let generatorImage = document.querySelector('.generator-image');
 
 generatorImage.src = getRandomElement(images);
 
-/* name generator */ 
+/* name generator */
 const decoration = [
     "宏",
     "牡",
@@ -116,10 +116,10 @@ const mapping = [
     "randomPhrase + randomDecoration + randomWord + randomDecoration + randomPrefix",
     "randomPhrase + randomSpacing + randomWord + randomSpacing + randomPrefix",
     "randomPhrase + randomSpacing + randomWord",
-] 
+]
 
 const generatorButton = document.querySelector('.generator-button');
-let generatorName = document.querySelector('.generator-logic-name');
+let generatorName = document.querySelector('.generator-name');
 
 
 generatorButton.addEventListener('click', function () {
@@ -132,17 +132,16 @@ generatorButton.addEventListener('click', function () {
     /* turns string from "mapping" array into variable */
     generatorName.textContent = randomMaping;
     let nameLength = generatorName.textContent.length
-    if (nameLength >= 15 && nameLength < 25) {
-        generatorName.style.fontSize = "2.5em";
+    if (nameLength >= 10 && nameLength < 19) {
+        generatorName.style.fontSize = "1.5em";
         generatorName.style.fontWeight = "500";
-    }   else if (nameLength >= 25) {
+    } else if (nameLength >= 20) {
+        generatorName.style.fontSize = "1.2em";
+        generatorName.style.fontWeight = "500";
+    } else {
         generatorName.style.fontSize = "2em";
-        generatorName.style.fontWeight = "500";
-    }   else {
-        generatorName.style.fontSize = "3em";
         generatorName.style.fontWeight = "normal"
     }
-    return randomMaping;
 })
 
 /* get random item from array */

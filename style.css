@@ -3,44 +3,21 @@ html {
 }
 
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-html,
-body,
-h1,
-h2,
-h3,
-p,
-button   {
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
-    font-size: 100%;
-}
-
-
-main {
-    height: 100vh;
+    font-family: 'Arial Narrow', Arial, sans-serif;
     background-color: rgba(200, 200, 200, .4);
     background-image: url(img/wp3534308-tokyo-ghoul-4k-wallpapers.jpg);
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-.overlay {
-    background-color: rgba(0, 0, 0, .5);
-    height: 100%;
-    display: flex;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-size: 100%;
 }
 
 .visually-hidden {
@@ -51,64 +28,63 @@ main {
     margin: -1px;
 }
 
-.generator {
+.overlay {
+    background-color: rgba(0, 0, 0, .5);
+    height: 100vh;
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+}
+
+.generator {
+    width: 90%;
+    margin: auto;
     background-color: rgba(255, 255, 255, .95);
     border-radius: 1%;
 }
 
 .generator-header {
-    width: 100%;
+    padding: 2.5%;
     background-color: rgba(22, 22, 22, 0.9);
-    padding: .5%;
-    text-align: center;
+    box-shadow: 0.5vw 0.5vw 2.5vw black;
     color: #eee;
-    box-shadow: 0.5vh 0.5vh 6vh black;
+    font-size: 2em;
+    text-align: center;
 }
 
-.generator-header h1 {
-    font-size: 1.5em;
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    column-gap: 5vh;
+    row-gap: 1vh;
+    padding: 1vh;
 }
 
 section.generator-promo {
-    width: 30%;
-    padding: .5% 0 .5% .5%;
+    order: 1;
     display: flex;
+    flex-direction: column;
 }
 
 .generator-promo img {
     max-width: 100%;
     height: auto;
-    align-self: center;
+    border-radius: 2.5%;
+    margin-bottom: 2.5%;
 }
-
-
-section.generator-logic {
-    width: 70%;
-    padding: .5% 0 .5% 1%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.generator-logic-name {
-    font-size: 3em;
-    line-height: 1.2em;
-}
-
 
 .generator-button {
-    padding: .5%;
-    border-radius: 1%;
+    padding: 2.5%;
     background-color: rgba(22, 22, 22, 0.9);
     color: #eee;
-    align-self: flex-end;
-    margin: 0 1% 1% 0;
+    border-radius: 2.5%;
+    font-size: 2.5em;
 }
-    
-    
+
 .generator-button:hover {
     background-color: #a50c0ce8;
+}
+
+section.generator-logic {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em;
+    line-height: 1.8em;
 }
