@@ -132,15 +132,18 @@ generatorButton.addEventListener('click', function () {
     /* turns string from "mapping" array into variable */
     generatorName.textContent = randomMaping;
     let nameLength = generatorName.textContent.length
-    if (nameLength >= 10 && nameLength < 19) {
-        generatorName.style.fontSize = "1.5em";
-        generatorName.style.fontWeight = "500";
-    } else if (nameLength >= 20) {
-        generatorName.style.fontSize = "1.2em";
-        generatorName.style.fontWeight = "500";
-    } else {
-        generatorName.style.fontSize = "2em";
+    if (nameLength < 10) {
+        generatorName.style.fontSize = "3.5em";
         generatorName.style.fontWeight = "normal"
+    } else if (nameLength >= 10 && nameLength < 19) {
+        generatorName.style.fontSize = "3em";
+        generatorName.style.fontWeight = "500";
+    } else if (nameLength >= 19 && nameLength < 27) {
+        generatorName.style.fontSize = "2.5em";
+        generatorName.style.fontWeight = "500";
+    } else if (nameLength >= 27) {
+        generatorName.style.fontSize = "2em";
+        generatorName.style.fontWeight = "500";
     }
 })
 

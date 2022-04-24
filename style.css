@@ -42,11 +42,11 @@ body {
 }
 
 .generator-header {
-    padding: 1.5%;
+    padding: .5%;
     background-color: rgba(22, 22, 22, 0.9);
-    box-shadow: 0.5vw 0.5vw 2.5vw black;
+    box-shadow: 0.5vw 0.5vw 3vw black;
     color: #eee;
-    font-size: 1.5em;
+    font-size: 1em;
     text-align: center;
 }
 
@@ -86,7 +86,11 @@ section.generator-promo {
 
 section.generator-logic {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 2em;
-    line-height: 1.8em;
     padding: 5%;
+    line-height: 2.2em;
+    justify-self: center;
+}
+
+.generator-name {
+    font-size: 2em;
 }
