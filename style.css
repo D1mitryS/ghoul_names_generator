@@ -42,7 +42,7 @@ body {
 }
 
 .generator-header {
-    padding: .5%;
+    padding: 2.5%;
     background-color: rgba(22, 22, 22, 0.9);
     box-shadow: 0.5vw 0.5vw 3vw black;
     color: #eee;
@@ -63,6 +63,7 @@ section.generator-promo {
     display: flex;
     flex-direction: column;
     padding: 5%;
+    
 }
 
 .generator-promo img {
