@@ -44,16 +44,16 @@ body {
 .generator-header {
     padding: 2.5%;
     background-color: rgba(22, 22, 22, 0.9);
-    box-shadow: 0.5vw 0.5vw 3vw black;
+    /* box-shadow: 0.5vw 0.5vw 3vw black; */
     color: #eee;
-    font-size: 1em;
+    font-size: 1.5em;
     text-align: center;
 }
 
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    column-gap: 5vh;
+    column-gap: 3vh;
     /* row-gap: 1vh; */
     padding: 1vh;
 }
@@ -62,7 +62,7 @@ section.generator-promo {
     order: 1;
     display: flex;
     flex-direction: column;
-    padding: 5%;
+    padding: 10%;
     
 }
 
@@ -87,7 +87,7 @@ section.generator-promo {
 
 section.generator-logic {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 5%;
+    padding-top: 7.5%;
     line-height: 2.2em;
     justify-self: center;
 }
