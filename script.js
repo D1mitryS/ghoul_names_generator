@@ -138,10 +138,10 @@ generatorButton.addEventListener('click', function () {
     } else if (nameLength >= 10 && nameLength < 19) {
         generatorName.style.fontSize = "3em";
         generatorName.style.fontWeight = "500";
-    } else if (nameLength >= 19 && nameLength < 27) {
+    } else if (nameLength >= 19 && nameLength < 26) {
         generatorName.style.fontSize = "2.5em";
         generatorName.style.fontWeight = "500";
-    } else if (nameLength >= 27) {
+    } else if (nameLength >= 26) {
         generatorName.style.fontSize = "2em";
         generatorName.style.fontWeight = "500";
     }
