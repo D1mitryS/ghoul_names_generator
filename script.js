@@ -1,5 +1,13 @@
-/* image switcher on load */
-const images = [
+/* get random item from array */
+const getRandomElement = array => {
+    let randomIndex = Math.floor(Math.random() * array.length);
+    return array[randomIndex];
+}
+
+
+/* random gif on load */
+const generatorImage = document.querySelector('.generator-image');
+const imageLinks = [
     "https://media3.giphy.com/media/S3UJC9kWXkORi/giphy.gif?cid=790b761186e7d5725feb3fa35ba9dc04f77bbb0776b6e202&rid=giphy.gif&ct=g",
     "https://media1.giphy.com/media/jlVObChD6Fb5C/giphy.gif?cid=790b7611357a7d0a60623974e9e8c485f8f654b17d31733c&rid=giphy.gif&ct=g",
     "https://media3.giphy.com/media/4EEV2sRFfQiPfoITqA/giphy.gif?cid=790b76117a37cff6fd5fef6f81ba014a18d626b76a642215&rid=giphy.gif&ct=g",
@@ -7,12 +15,10 @@ const images = [
     "https://media3.giphy.com/media/2XLoAphEiufV6/giphy.gif?cid=790b7611d2398c73293a2c0ee881283c7038418c9fcfa650&rid=giphy.gif&ct=g",
     "https://media0.giphy.com/media/3eQduEnQqEpVFOO6FQ/giphy.gif?cid=790b761148231cf91f523ec1a73917f3056256814e9cd625&rid=giphy.gif&ct=g"
 ]
+generatorImage.src = getRandomElement(imageLinks);
 
-let generatorImage = document.querySelector('.generator-image');
 
-generatorImage.src = getRandomElement(images);
-
-/* name generator */
+/* name variations */
 const decoration = [
     "宏",
     "牡",
@@ -94,6 +100,8 @@ const word = [
     "tragic",
     "emptiness"
 ]
+
+/* name variations mapping */
 const mapping = [
     "randomPrefix + randomSpacing + randomPhrase + randomDecoration + randomWord +randomDecoration",
     "randomPrefix + randomDecoration + randomPhrase + randomDecoration + randomWord",
@@ -118,20 +126,23 @@ const mapping = [
     "randomPhrase + randomSpacing + randomWord",
 ]
 
+
 const generatorButton = document.querySelector('.generator-button');
-let generatorName = document.querySelector('.generator-name');
+const generatorName = document.querySelector('.generator-name');
 
+generatorButton.addEventListener('click', () => {
+    const randomDecoration = getRandomElement(decoration);
+    const randomPrefix = getRandomElement(prefix);
+    const randomSpacing = getRandomElement(spacing);
+    const randomPhrase = getRandomElement(phrase);
+    const randomWord = getRandomElement(word);
 
-generatorButton.addEventListener('click', function () {
-    let randomDecoration = getRandomElement(decoration);
-    let randomPrefix = getRandomElement(prefix);
-    let randomSpacing = getRandomElement(spacing);
-    let randomPhrase = getRandomElement(phrase);
-    let randomWord = getRandomElement(word);
-    let randomMaping = eval(getRandomElement(mapping));
     /* turns string from "mapping" array into variable */
+    const randomMaping = eval(getRandomElement(mapping));
+
     generatorName.textContent = randomMaping;
-    let nameLength = generatorName.textContent.length
+    const nameLength = generatorName.textContent.length;
+
     if (nameLength < 10) {
         generatorName.style.fontSize = "3.5em";
         generatorName.style.fontWeight = "normal"
@@ -147,17 +158,10 @@ generatorButton.addEventListener('click', function () {
     }
 })
 
-/* get random item from array */
-
-function getRandomElement(array) {
-    let randomIndex = Math.floor(Math.random() * array.length);
-    return array[randomIndex];
-}
-
 
 /* audio play */
 const audio = document.querySelector('.audio');
 
-generatorButton.addEventListener('click', function () {
+generatorButton.addEventListener('click', () => {
     audio.play();
 })
