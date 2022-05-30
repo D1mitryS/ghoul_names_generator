@@ -1,12 +1,12 @@
-/* get random item from array */
-const getRandomElement = array => {
-    let randomIndex = Math.floor(Math.random() * array.length);
-    return array[randomIndex];
+/* get  item from array */
+const getRandElement = array => {
+    const randIndex = Math.floor(Math.random() * array.length);
+    return array[randIndex];
 }
 
 
-/* random gif on load */
-const generatorImage = document.querySelector('.generator-image');
+/*  random gif on load */
+const generatorImage = document.querySelector('#generator-image');
 const imageLinks = [
     "https://media3.giphy.com/media/S3UJC9kWXkORi/giphy.gif?cid=790b761186e7d5725feb3fa35ba9dc04f77bbb0776b6e202&rid=giphy.gif&ct=g",
     "https://media1.giphy.com/media/jlVObChD6Fb5C/giphy.gif?cid=790b7611357a7d0a60623974e9e8c485f8f654b17d31733c&rid=giphy.gif&ct=g",
@@ -15,11 +15,11 @@ const imageLinks = [
     "https://media3.giphy.com/media/2XLoAphEiufV6/giphy.gif?cid=790b7611d2398c73293a2c0ee881283c7038418c9fcfa650&rid=giphy.gif&ct=g",
     "https://media0.giphy.com/media/3eQduEnQqEpVFOO6FQ/giphy.gif?cid=790b761148231cf91f523ec1a73917f3056256814e9cd625&rid=giphy.gif&ct=g"
 ]
-generatorImage.src = getRandomElement(imageLinks);
+generatorImage.src = getRandElement(imageLinks);
 
 
 /* name variations */
-const decoration = [
+const decorations = [
     "宏",
     "牡",
     "学",
@@ -37,7 +37,7 @@ const decoration = [
     "☠",
     "༒",
 ];
-const prefix = [
+const prefixes = [
     "zxc",
     "ZXC",
     "zxc king",
@@ -53,12 +53,12 @@ const prefix = [
     "322",
     "ugly god",
 ]
-const spacing = [
+const spacings = [
     " ",
     " ",
     "|"
 ]
-const phrase = [
+const phrases = [
     "мёртв внутри",
     "дед внутри",
     "мама киллер",
@@ -79,7 +79,7 @@ const phrase = [
     "bury me alive",
     "1v9"
 ]
-const word = [
+const words = [
     "hopeless",
     "pain",
     "ghoul",
@@ -102,45 +102,47 @@ const word = [
 ]
 
 /* name variations mapping */
-const mapping = [
-    "randomPrefix + randomSpacing + randomPhrase + randomDecoration + randomWord +randomDecoration",
-    "randomPrefix + randomDecoration + randomPhrase + randomDecoration + randomWord",
-    "randomPrefix + randomDecoration + randomWord + randomDecoration + randomPhrase",
-    "randomPrefix + randomSpacing + randomWord + randomSpacing + randomPhrase",
-    "randomPrefix + randomSpacing + randomPhrase + randomSpacing + randomWord",
-    "randomPrefix + randomDecoration + randomWord + randomDecoration",
-    "randomPrefix + randomSpacing + randomWord",
-    "randomPrefix + randomSpacing + randomPhrase",
-    "randomDecoration + randomWord + randomDecoration + randomPhrase + randomSpacing + randomPrefix",
-    "randomDecoration + randomPhrase + randomDecoration + randomWord + randomSpacing + randomPrefix",
-    "randomDecoration + randomPhrase + randomDecoration + randomPrefix",
-    "randomDecoration + randomWord + randomDecoration + randomPhrase + randomPrefix",
-    "randomDecoration + randomWord + randomDecoration + randomPhrase",
-    "randomDecoration + randomPhrase + randomDecoration + randomWord",
-    "randomDecoration + randomWord + randomDecoration",
-    "randomWord + randomDecoration + randomPhrase + randomDecoration + randomPrefix",
-    "randomWord + randomSpacing + randomPhrase + randomSpacing + randomPrefix",
-    "randomWord + randomSpacing + randomPhrase",
-    "randomPhrase + randomDecoration + randomWord + randomDecoration + randomPrefix",
-    "randomPhrase + randomSpacing + randomWord + randomSpacing + randomPrefix",
-    "randomPhrase + randomSpacing + randomWord",
+const NameVariations = [
+    "prefix + spacing + phrase + decoration + word +decoration",
+    "prefix + decoration + phrase + decoration + word",
+    "prefix + decoration + word + decoration + phrase",
+    "prefix + spacing + word + spacing + phrase",
+    "prefix + spacing + phrase + spacing + word",
+    "prefix + decoration + word + decoration",
+    "prefix + spacing + word",
+    "prefix + spacing + phrase",
+    "decoration + word + decoration + phrase + spacing + prefix",
+    "decoration + phrase + decoration + word + spacing + prefix",
+    "decoration + phrase + decoration + prefix",
+    "decoration + word + decoration + phrase + prefix",
+    "decoration + word + decoration + phrase",
+    "decoration + phrase + decoration + word",
+    "decoration + word + decoration",
+    "word + decoration + phrase + decoration + prefix",
+    "word + spacing + phrase + spacing + prefix",
+    "word + spacing + phrase",
+    "phrase + decoration + word + decoration + prefix",
+    "phrase + spacing + word + spacing + prefix",
+    "phrase + spacing + word",
 ]
 
 
-const generatorButton = document.querySelector('.generator-button');
-const generatorName = document.querySelector('.generator-name');
+const generatorButton = document.querySelector('#generator-button');
+const generatorName = document.querySelector('#generated-name');
 
 generatorButton.addEventListener('click', () => {
-    const randomDecoration = getRandomElement(decoration);
-    const randomPrefix = getRandomElement(prefix);
-    const randomSpacing = getRandomElement(spacing);
-    const randomPhrase = getRandomElement(phrase);
-    const randomWord = getRandomElement(word);
+    const decoration = getRandElement(decorations);
+    const prefix = getRandElement(prefixes);
+    const spacing = getRandElement(spacings);
+    const phrase = getRandElement(phrases);
+    const word = getRandElement(words);
 
-    /* turns string from "mapping" array into variable */
-    const randomMaping = eval(getRandomElement(mapping));
+    /* turns string from "nameVariation" array into variable */
+    const maping = eval(getRandElement(NameVariations));
 
-    generatorName.textContent = randomMaping;
+    generatorName.textContent = maping;
+
+
     const nameLength = generatorName.textContent.length;
 
     if (nameLength < 10) {
@@ -160,7 +162,7 @@ generatorButton.addEventListener('click', () => {
 
 
 /* audio play */
-const audio = document.querySelector('.audio');
+const audio = document.querySelector('#audio');
 
 generatorButton.addEventListener('click', () => {
     audio.play();

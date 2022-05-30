@@ -4,20 +4,10 @@ html {
 
 body {
     font-family: 'Arial Narrow', Arial, sans-serif;
-    background-color: rgba(200, 200, 200, .4);
-    background-image: url(img/wp3534308-tokyo-ghoul-4k-wallpapers.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+h1, h2, h3 {
     font-weight: normal;
-    font-size: 100%;
 }
 
 .visually-hidden {
@@ -28,9 +18,20 @@ body {
     margin: -1px;
 }
 
+
+main {
+    background-color: rgba(200, 200, 200, .4);
+    background-image: url(img/wp3534308-tokyo-ghoul-4k-wallpapers.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
 .overlay {
     background-color: rgba(0, 0, 0, .5);
-    height: 100vh;
+    height: 100%;
     display: flex;
 }
 
@@ -42,41 +43,39 @@ body {
 }
 
 .generator-header {
-    padding: .5%;
-    background-color: rgba(22, 22, 22, 0.9);
-    box-shadow: 0.5vw 0.5vw 3vw black;
-    color: #eee;
-    font-size: 1.5em;
+    padding: 10px;
     text-align: center;
+    color: #eee;
+    background-color: rgba(22, 22, 22, 0.9);
+    box-shadow: 1px 1px 10px black;
 }
 
 .container {
+    padding: 20px 0 20px 20px;
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
     grid-template-columns: 0.75fr 1.25fr;
-    padding: 1.5%;
-    column-gap: 1.5%;
+    /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+    gap: 20px
 }
 
 .generator-promo {
     display: flex;
     flex-direction: column;
-
 }
 
 .generator-promo img {
     max-width: 100%;
     height: auto;
     border-radius: 2.5%;
-    margin-bottom: 5%;
+    margin-bottom: 10px;
 }
 
 .generator-button {
-    padding: 2.5%;
-    background-color: rgba(22, 22, 22, 0.9);
-    color: #eee;
-    border-radius: 2.5%;
+    padding: 5px;
     font-size: 1.5em;
+    border-radius: 2.5%;
+    color: #eee;
+    background-color: rgba(22, 22, 22, 0.9);
 }
 
 .generator-button:hover {
@@ -85,11 +84,9 @@ body {
 
 .generator-logic {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 2.5%;
     line-height: 1.1;
-    /* justify-self: center; */
 }
 
-.generator-name {
+.generated-name {
     font-size: 2em;
 }
