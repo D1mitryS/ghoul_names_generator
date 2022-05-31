@@ -1,11 +1,11 @@
-/* get  item from array */
+/* Gets random item from array */
 const getRandElement = array => {
     const randIndex = Math.floor(Math.random() * array.length);
     return array[randIndex];
 }
 
 
-/*  random gif on load */
+/*  Random gif on load */
 const generatorImage = document.querySelector('#generator-image');
 const imageLinks = [
     "https://media3.giphy.com/media/S3UJC9kWXkORi/giphy.gif?cid=790b761186e7d5725feb3fa35ba9dc04f77bbb0776b6e202&rid=giphy.gif&ct=g",
@@ -18,7 +18,7 @@ const imageLinks = [
 generatorImage.src = getRandElement(imageLinks);
 
 
-/* name variations */
+/* Name variations */
 const decorations = [
     "宏",
     "牡",
@@ -130,6 +130,7 @@ const NameVariations = [
 const generatorButton = document.querySelector('#generator-button');
 const generatorName = document.querySelector('#generated-name');
 
+/* Generates random name based on random string from the arrays */
 generatorButton.addEventListener('click', () => {
     const decoration = getRandElement(decorations);
     const prefix = getRandElement(prefixes);
@@ -137,12 +138,13 @@ generatorButton.addEventListener('click', () => {
     const phrase = getRandElement(phrases);
     const word = getRandElement(words);
 
-    /* turns string from "nameVariation" array into variable */
-    const maping = eval(getRandElement(NameVariations));
 
+    /* Turns string from "nameVariation" array into consts stated above */
+    const maping = eval(getRandElement(NameVariations));
     generatorName.textContent = maping;
 
-
+    
+    /* Changes font size and font weight based on generated name length */
     const nameLength = generatorName.textContent.length;
 
     if (nameLength < 10) {
@@ -161,7 +163,7 @@ generatorButton.addEventListener('click', () => {
 })
 
 
-/* audio play */
+/* Audio playback on first click */
 const audio = document.querySelector('#audio');
 
 generatorButton.addEventListener('click', () => {
