@@ -60,8 +60,6 @@ const spacings = [
 ]
 const phrases = [
     "мёртв внутри",
-    "дед внутри",
-    "мама киллер",
     "dead inside",
     "Dead inside",
     "hate me as you do",
@@ -73,7 +71,6 @@ const phrases = [
     "4-0 pos or leave",
     "8k pts",
     "pudge abuzer",
-    "плевать на всех",
     "all mute",
     "eternal despair",
     "bury me alive",
