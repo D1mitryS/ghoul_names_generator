@@ -1,0 +1,92 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+
+main {
+    background-color: rgba(200, 200, 200, .4);
+    background-image: url(img/wp3534308-tokyo-ghoul-4k-wallpapers.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, .5);
+    height: 100%;
+    display: flex;
+}
+
+.generator {
+    width: 90%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, .95);
+    border-radius: 1%;
+}
+
+.generator-header {
+    padding: 10px;
+    text-align: center;
+    color: #eee;
+    background-color: rgba(22, 22, 22, 0.9);
+    box-shadow: 1px 1px 10px black;
+}
+
+.container {
+    padding: 20px 0 20px 20px;
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+    gap: 20px
+}
+
+.generator-promo {
+    display: flex;
+    flex-direction: column;
+}
+
+.generator-promo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 2.5%;
+    margin-bottom: 10px;
+}
+
+.generator-button {
+    padding: 5px;
+    font-size: 1.5em;
+    border-radius: 2.5%;
+    color: #eee;
+    background-color: rgba(22, 22, 22, 0.9);
+}
+
+.generator-button:hover {
+    background-color: #a50c0ce8;
+}
+
+.generator-logic {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.1;
+}
+
+.generated-name {
+    font-size: 2em;
+}
