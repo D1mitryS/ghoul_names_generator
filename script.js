@@ -6,8 +6,8 @@ const getRandElement = array => {
 
 
 /*  Random gif on load */
-const generatorImage = document.querySelector('#generator-image');
-const imageLinks = [
+const gif = document.querySelector('#generator-image');
+const gifLinks = [
     "https://media3.giphy.com/media/S3UJC9kWXkORi/giphy.gif?cid=790b761186e7d5725feb3fa35ba9dc04f77bbb0776b6e202&rid=giphy.gif&ct=g",
     "https://media1.giphy.com/media/jlVObChD6Fb5C/giphy.gif?cid=790b7611357a7d0a60623974e9e8c485f8f654b17d31733c&rid=giphy.gif&ct=g",
     "https://media3.giphy.com/media/4EEV2sRFfQiPfoITqA/giphy.gif?cid=790b76117a37cff6fd5fef6f81ba014a18d626b76a642215&rid=giphy.gif&ct=g",
@@ -15,7 +15,7 @@ const imageLinks = [
     "https://media3.giphy.com/media/2XLoAphEiufV6/giphy.gif?cid=790b7611d2398c73293a2c0ee881283c7038418c9fcfa650&rid=giphy.gif&ct=g",
     "https://media0.giphy.com/media/3eQduEnQqEpVFOO6FQ/giphy.gif?cid=790b761148231cf91f523ec1a73917f3056256814e9cd625&rid=giphy.gif&ct=g"
 ]
-generatorImage.src = getRandElement(imageLinks);
+gif.src = getRandElement(gifLinks);
 
 
 /* Name variations */
@@ -124,11 +124,11 @@ const NameVariations = [
 ]
 
 
-const generatorButton = document.querySelector('#generator-button');
-const generatorName = document.querySelector('#generated-name');
+const generateBtn = document.querySelector('#generator-button');
+const generatedName = document.querySelector('#generated-name');
 
 /* Generates random name based on random string from the arrays */
-generatorButton.addEventListener('click', () => {
+generateBtn.addEventListener('click', () => {
     const decoration = getRandElement(decorations);
     const prefix = getRandElement(prefixes);
     const spacing = getRandElement(spacings);
@@ -138,24 +138,24 @@ generatorButton.addEventListener('click', () => {
 
     /* Turns string from "nameVariation" array into consts stated above */
     const maping = eval(getRandElement(NameVariations));
-    generatorName.textContent = maping;
+    generatedName.textContent = maping;
 
     
     /* Changes font size and font weight based on generated name length */
-    const nameLength = generatorName.textContent.length;
+    const nameLength = generatedName.textContent.length;
 
     if (nameLength < 10) {
-        generatorName.style.fontSize = "3.5em";
-        generatorName.style.fontWeight = "normal"
+        generatedName.style.fontSize = "3.5em";
+        generatedName.style.fontWeight = "normal"
     } else if (nameLength >= 10 && nameLength < 19) {
-        generatorName.style.fontSize = "3em";
-        generatorName.style.fontWeight = "500";
+        generatedName.style.fontSize = "3em";
+        generatedName.style.fontWeight = "500";
     } else if (nameLength >= 19 && nameLength < 26) {
-        generatorName.style.fontSize = "2.5em";
-        generatorName.style.fontWeight = "500";
+        generatedName.style.fontSize = "2.5em";
+        generatedName.style.fontWeight = "500";
     } else if (nameLength >= 26) {
-        generatorName.style.fontSize = "2em";
-        generatorName.style.fontWeight = "500";
+        generatedName.style.fontSize = "2em";
+        generatedName.style.fontWeight = "500";
     }
 })
 
@@ -163,6 +163,6 @@ generatorButton.addEventListener('click', () => {
 /* Audio playback on first click */
 const audio = document.querySelector('#audio');
 
-generatorButton.addEventListener('click', () => {
+generateBtn.addEventListener('click', () => {
     audio.play();
 })
